@@ -2,7 +2,7 @@
   "name": "memo_cards",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/IvanFestina",
+  "homepage": "https://IvanFestina.github.io/memo_cards",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.14.1",
