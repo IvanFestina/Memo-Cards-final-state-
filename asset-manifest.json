@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/memo_cards/static/css/main.073c9b0a.css",
+    "main.js": "/memo_cards/static/js/main.cb207495.js",
+    "index.html": "/memo_cards/index.html",
+    "main.073c9b0a.css.map": "/memo_cards/static/css/main.073c9b0a.css.map",
+    "main.cb207495.js.map": "/memo_cards/static/js/main.cb207495.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.cb207495.js"
+  ]
+}
