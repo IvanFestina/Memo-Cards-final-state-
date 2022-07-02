@@ -1,0 +1,90 @@
+@import 'src/ui/common/styles/variables';
+@import 'src/ui/common/styles/mixins';
+
+.headerWrapper {
+  display: grid;
+  grid-template-columns: 180px 100px 100px 100px 1fr 100px;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  z-index: 11;
+
+  .logoBlock {
+    width: 140px;
+    margin: 5px 20px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .title {
+      span {
+        font-size: 10px;
+        margin-left: 7px;
+        letter-spacing: .2em;
+      }
+    }
+
+    h1 {
+      margin: 10px 0 0 0;
+      font-size: 30px;
+      line-height: .3;
+    }
+  }
+
+  .tab {
+    height: 100%;
+    border-left: 1px solid $borderColor;
+
+    a {
+      text-decoration: none;
+      color: $secondTextColor;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      transition: all .3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        color: $primary;
+        transition: all .3s ease;
+      }
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0.05);;
+        color: $primary;
+        transition: all .3s ease;
+      }
+    }
+  }
+
+  .settingsBlock {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-self: end;
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      margin-left: 50px;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .tabLogout {
+    @extend .tab;
+  }
+}

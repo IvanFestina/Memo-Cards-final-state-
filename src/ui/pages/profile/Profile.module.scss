@@ -1,0 +1,138 @@
+@import '../../common/styles/variables';
+@import '../../common/styles/mixins';
+
+.profileWrapper {
+  padding: 50px;
+  @include block();
+  justify-content: flex-start;
+  margin-top: 50px;
+
+  .profileContainer {
+    @include form();
+    border-radius: 2px;
+    border: none;
+    padding: 40px 100px;
+
+    .borderAvatar {
+      width: 160px;
+      height: 160px;
+      background-image: linear-gradient(40deg, #0177C4 0%, #59CAF9 100%);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 20px 40px 0 rgba(89, 202, 249, .3);
+      position: relative;
+
+      .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 20px 40px 0 rgba(89, 202, 249, .3);
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .changeAvatar {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        background-color: rgba(6, 59, 108, .4);
+        border: 1px solid $mainBGC;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 20px;
+        transition: all .3s ease-in;
+
+        &:hover {
+          box-shadow: 0 1px 4px 0 rgb(0 0 0 / 37%);
+          transition: all .3s ease;
+        }
+
+      }
+    }
+
+    .name {
+      margin: 30px 0;
+      min-width: 300px;
+      text-align: center;
+      color: $textColor;
+    }
+
+    .meDescription {
+      color: $secondTextColor;
+      font-weight: bold;
+    }
+  }
+
+  .changeAvatarSettings {
+
+
+    .uploadPhotoButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input[type='file'] {
+        display: none;
+      }
+
+      .downloadButton {
+
+        :hover {
+          cursor: pointer;
+        }
+
+        span {
+          margin-right: 10px;
+        }
+      }
+
+      .avatarPreview {
+        text-align: center;
+        margin-left: 20px;
+
+        p {
+          color: $primary;
+          font-size: 20px;
+          margin-top: 0;
+        }
+
+        .avatarPreviewImg {
+          width: 300px;
+          height: 300px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+          }
+        }
+
+      }
+    }
+
+
+  }
+
+  .uploadButton {
+    @include formButtonBlock();
+    margin-top: 20px;
+  }
+
+}

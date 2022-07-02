@@ -1,0 +1,146 @@
+@import 'src/ui/common/styles/variables';
+@import 'src/ui/common/styles/mixins';
+
+.packRow {
+  transition: all .2s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scaleY(1.2) scaleX(1.01) translateY(-10%);
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+    transition: transform .2s ease;
+    position: relative;
+    z-index: 1;
+
+    div {
+      transform: scaleY(0.85) scaleX(1) translateY(0);
+    }
+
+    & > td {
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+
+  & > td {
+    height: 30px;
+    border-spacing: 0;
+    border: 0;
+    margin: 0;
+    padding: 2px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  .nameCol {
+    @include forImage;
+  }
+
+  .cardsCountCol {
+
+  }
+
+  .updatedCol {
+
+  }
+
+  .userNameCol {
+
+  }
+
+  .actions {
+    .actionsRow {
+      display: flex;
+
+      .actionsCol {
+        width: 90px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+
+        .learnButton {
+          background-color: $success;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #3D8B40;
+          }
+        }
+
+        .editButton {
+          background-color: $warning;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #EC971F;
+          }
+
+        }
+
+        .deleteButton {
+          background-color: $danger;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #942A25;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+}
+
+.imagePreview {
+  text-align: center;
+
+  p {
+    color: $primary;
+    font-size: 20px;
+    margin: 0;
+
+    span {
+      margin-right: 20px;
+    }
+
+    .closeIcon {
+      color: $danger;
+      width: 15px;
+      height: 15px;
+      padding: 10px;
+      margin-bottom: -10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: all .3s ease;
+
+      &:hover {
+        background-color: rgba(189, 54, 47, .1);
+        transition: all .3s ease;
+      }
+    }
+  }
+
+  .imagePreviewImg {
+    width: 200px;
+    padding: 20px 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    }
+  }
+
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.downloadButton {
+  margin: 20px 0;
+}

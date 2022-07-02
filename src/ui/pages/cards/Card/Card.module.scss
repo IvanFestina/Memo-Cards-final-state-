@@ -1,0 +1,78 @@
+@import 'src/ui/common/styles/variables';
+@import 'src/ui/common/styles/mixins';
+@import 'src/ui/pages/packs/pack/Pack.module';
+
+.cardRow {
+  & > td {
+    border-spacing: 0;
+    border: 0;
+    margin: 0;
+    padding: 2px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  .answerCol {
+    @include forImage;
+  }
+
+  .gradeCol {
+    font-weight: bold;
+    min-width: 70px;
+
+    .star {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 15px;
+      height: 15px;
+      margin: 5px;
+      float: left;
+
+
+      svg {
+        float: left;
+        fill: #F7A002;
+        width: 100%;
+        height: 100%;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .actions {
+    .actionsRow {
+      display: flex;
+
+      .actionsCol {
+        width: 90px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+
+        .editButton {
+          background-color: $warning;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #EC971F;
+          }
+
+        }
+
+        .deleteButton {
+          background-color: $danger;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #942A25;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+}
